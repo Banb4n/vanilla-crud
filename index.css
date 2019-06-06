@@ -1,0 +1,32 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.header {
+    padding: 40px 0;
+    width: 100%;
+    color: lightgrey;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.actions-container {
+    border: 1px solid lightgrey;
+    padding: 10px 20px;
+}
+
+.list {
+    background: whitesmoke;
+    padding: 10px 40px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 40px;
+    grid-row-gap: 30px;
+    list-style: none;
+}

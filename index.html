@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vanilla </title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <section class="container">
+        <div class="header">VanillaJS CRUD (full in browser)</div>
+        <div id="notifications"></div>
+        <div class="actions-container">
+            <form id="create-form">
+                <input placeholder="title" name="title" />
+                <input placeholder="platform" name="platform" />
+                <input placeholder="rate" name="rate" />
+
+                <button id="create-button" type="submit">Add</button>
+            </form>
+            <button>Find</button>
+            <button>Refresh</button>
+        </div>
+        <div class="container-list">
+            <div class="list" id="list">
+            </div>
+        </div>
+    </section>
+
+    <script src="index.js"></script> 
+</body>
+</html>
