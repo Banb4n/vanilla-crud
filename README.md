@@ -2,13 +2,13 @@ Basic vanilla js CRUD full in the browser.
 
 TODO:
 
-  - [ ] create basic html
-  - [ ] create css html
+  - [x] create basic html
+  - [x] create css html
   - [ ] CRUD methods:
-    - [ ] Create
-    - [ ] Get
+    - [x] Create
+    - [x] Get
     - [ ] Edit
     - [ ] Delete
     - [ ] Count
-    - [ ] Fetch all
+    - [x] Fetch all
     - [ ] Sort by [ date, alphabetic ]
