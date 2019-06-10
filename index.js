@@ -4,8 +4,6 @@ const initialState = {
     rating: '4.5',
     id: Date.now(),
 };
-// Where we insert errors/success messages
-const notificationEl = document.getElementById('notifications');
 const createForm = document.getElementById('create-form');
 const deleteBtn = document.getElementById('create-button');
 const listContainer = document.getElementById('list');
@@ -30,7 +28,7 @@ function useValues() {
     if (localStorage.getItem('store')) {
         return JSON.parse(localStorage.getItem('store'));
     }
-    // We instantiate the DB if it's empty
+    // Initialize the value if the token doesn't exist in the storage
     initDB();
     return JSON.parse(localStorage.getItem('store'));
 }
@@ -43,11 +41,10 @@ function render() {
     // Render
     values.map(item => {
         listContainer.innerHTML += `
-      <li class="list-item">
+      <li class="list-item" id="${item.id}">
           <p>${item.title}</p>
           <p>${item.rating}</p>
           <p>${item.platform}</p>
-          <p>${item.id}</p>
       </li>
       `;
     });
@@ -99,7 +96,7 @@ function deleteItem(id) {
     console.info('window loading');
     initDB();
     render();
-
+    const { values } = useValues();
     createForm.addEventListener('submit', event => {
         event.preventDefault();
         const title = event.target[0].value;
@@ -109,6 +106,13 @@ function deleteItem(id) {
             title,
             platform,
             rating,
+        });
+    });
+
+    values.map(item => {
+        // Add event listener for update action
+        document.getElementById(item.id).addEventListener('click', event => {
+            console.log({ id: event.target });
         });
     });
 })();

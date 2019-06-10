@@ -21,7 +21,7 @@
     padding: 10px 20px;
 }
 
-.list {
+#list {
     background: whitesmoke;
     padding: 10px 40px;
     display: grid;
